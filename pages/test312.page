@@ -1,0 +1,8 @@
+<apex:page standardController="Contact" extensions="Test312">
+	<script type="text/javascript">
+		function f(){
+			opener.document.location.reload(true);
+		}
+	</script>
+	<input type="button" value="test" id="test2" onclick="f();"/>
+</apex:page>

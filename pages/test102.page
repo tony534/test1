@@ -1,0 +1,24 @@
+<apex:page controller="Test102">
+	<apex:form >
+		<apex:pageBlock >
+			<apex:pageBlockSection >
+				<apex:inputField value="{!conObj.FirstName}" id="firstName"/>
+				<apex:inputField value="{!conObj.LastName}" id="lastName"/>
+				<input type="checkbox" name="valid" value="true" onclick="f(this);"/> valid
+				<script type="text/javascript">
+					function f(obj){
+						var firstNameElem = document.getElementById('{!$Component.firstName}');
+						if(obj.checked){
+							firstNameElem.disabled = true;
+						}else{
+							firstNameElem.disabled = false;							
+						}
+					}
+					
+					
+				</script>
+				<apex:commandButton value="save" action="{!save}"/>
+			</apex:pageBlockSection>
+		</apex:pageBlock> 
+	</apex:form>
+</apex:page>

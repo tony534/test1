@@ -1,0 +1,18 @@
+<apex:page standardController="Contact">
+<apex:includeScript value="{!$Resource.jquery}"/>
+<script type="text/javascript">
+	$j = jQuery.noConflict();
+	$j(document).ready(function(){
+		$j(".required").wrap("<div class=\"requiredInput\"></div>").before("<div class=\"requiredBlock\"></div>");
+	});
+</script>
+<apex:form >
+<apex:pageBlock >
+<apex:pageBlockSection >
+<apex:inputField value="{!contact.FirstName}" styleClass="required"/>
+<apex:inputField value="{!contact.LastName}"/>
+<apex:inputField value="{!contact.Title}" styleClass="required"/>
+</apex:pageBlockSection>
+</apex:pageBlock>
+</apex:form>
+</apex:page>

@@ -1,0 +1,10 @@
+<apex:page controller="Test001">
+<apex:pageBlock >
+	<apex:pageBlockSection >
+	<apex:outputLink value="/{!con.id}">
+		{!con.firstname},, {!con.lastname}
+		<apex:param name="test" value="{!con.lastname}" />
+	</apex:outputLink> 
+	</apex:pageBlockSection>
+</apex:pageBlock>
+</apex:page>

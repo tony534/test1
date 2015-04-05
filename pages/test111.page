@@ -1,0 +1,9 @@
+<apex:page controller="Test111">
+<apex:form >
+	<apex:commandButton action="{!test}" value="test" onclick="return true;"/>
+	<apex:commandButton action="{!test2}" value="test2" onclick="if(!true) return false;" rerender="out"/>
+	<apex:outputPanel id="out">
+		{!msg}
+	</apex:outputPanel>
+</apex:form>
+</apex:page>

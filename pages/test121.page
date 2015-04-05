@@ -1,0 +1,10 @@
+<apex:page standardController="Account" extensions="Test121">
+	<apex:composition template="test199">
+		<apex:define name="input">
+			<apex:inputText value="{!name}"/>
+		</apex:define>
+		<apex:define name="submit">
+			<apex:commandButton value="test" action="{!toTest}"/>
+		</apex:define>
+	</apex:composition>
+</apex:page>

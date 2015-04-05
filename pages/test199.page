@@ -1,0 +1,9 @@
+<apex:page standardController="Account" extensions="Test120" action="{!init}">
+	<apex:form >
+		{!test}
+		<apex:insert name="input"/>
+		{!test}
+		<apex:insert name="submit"/>
+		{!test}
+	</apex:form>
+</apex:page>

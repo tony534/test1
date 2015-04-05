@@ -1,0 +1,27 @@
+<apex:page controller="JsonTest">
+	<apex:includeScript value="{!$Resource.jquery}"/>
+	<script type="text/javascript">
+		$j = jQuery.noConflict();
+		$j(document).ready(function(){
+			$j("#testButton").click(function(){
+				Visualforce.remoting.Manager.invokeAction(
+					'{!$RemoteAction.JsonTest.convert}',
+					$j("#fname").val(), 
+					function(result,event){
+						if(event.status){
+							alert(result);
+						}else if(event.type==='exception'){
+							alert('11...');
+						}else{
+							alert('22...');
+						}
+					},
+					{ecapse:true}
+				);
+			});
+		});	
+	</script>
+	<p id="jsonString">{!jsonString}</p>
+	<input type="text" name="name" id="fname"/>
+	<input type="button" value="test" id="testButton"/>
+</apex:page>

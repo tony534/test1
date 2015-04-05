@@ -1,0 +1,9 @@
+<apex:page standardController="Test001Obj__c">
+    <apex:pageBlock >
+        <apex:form >
+            <apex:pageBlockSection title="this is a test" columns="1" collapsible="">
+		<apex:inputField value="{!Test001Obj__c.OwnerId}" />
+            </apex:pageBlockSection>
+        </apex:form>
+    </apex:pageBlock>
+</apex:page>
